@@ -1,4 +1,4 @@
-import { log } from './decorators';
+import { log, a, b, c } from './decorators';
 
 class Test {
     public name: string;
@@ -7,7 +7,9 @@ class Test {
         this.name = name;
     }
 
-    @log
+    @a()
+    @b()
+    @c()
     public appendTextToName(text: string) {
         this.name += text;
         return this.name;
